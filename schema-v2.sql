@@ -5,8 +5,6 @@
 
 -- 1) 头像列从「emoji（≤8 字符）」升级为「emoji 或图片 URL」
 alter table public.profiles drop constraint if exists profiles_avatar_check;
-alter table public.profiles
-  alter column avatar type text using avatar::text;
 
 alter table public.profiles
   add constraint profiles_avatar_check check (char_length(avatar) between 1 and 300);
