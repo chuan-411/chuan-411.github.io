@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>桜算法手帳</title>
+    <link>https://chuan-411.github.io</link>
+    <description>把每一次 WA，都种成一树樱花。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 22 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://chuan-411.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>P3808 【模板】AC 自动机（简单版） · 补题</title>
+      <link>https://chuan-411.github.io/solutions/luogu-p3808</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/solutions/luogu-p3808</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+      <category>补题</category>
+      <description>队列里排着的下一站：Trie 图上建 fail 指针，统计模式串在文本中出现的次数。还没开始写。</description>
+    </item>
+    <item>
+      <title>CF 1866G Grouped Carriages · 补题</title>
+      <link>https://chuan-411.github.io/solutions/cf1866g</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/solutions/cf1866g</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+      <category>补题</category>
+      <description>还在啃的一道 *2400。目前的想法是二分答案 + 贪心检查，但 check 的正确性还没证出来。</description>
+    </item>
+    <item>
+      <title>复杂度分析：常数、均摊，以及那些被忽略的对数 · 笔记</title>
+      <link>https://chuan-411.github.io/notes/complexity-constants</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/notes/complexity-constants</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+      <category>笔记</category>
+      <description>为什么两个同为 O(n log n) 的写法会差 5 倍？这篇记录我对「常数」和「均摊」的理解，以及赛场上怎么估时限。</description>
+    </item>
+    <item>
+      <title>P1886 滑动窗口 · 补题</title>
+      <link>https://chuan-411.github.io/solutions/luogu-p1886</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/solutions/luogu-p1886</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <category>补题</category>
+      <description>单调队列模板。维护窗口最大值和最小值，顺便理清「队头过期、队尾不优」这两个判断的顺序。</description>
+    </item>
+    <item>
+      <title>字符串哈希与 KMP：两条通往「子串匹配」的路 · 笔记</title>
+      <link>https://chuan-411.github.io/notes/string-hash-kmp</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/notes/string-hash-kmp</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <category>笔记</category>
+      <description>哈希靠概率，KMP 靠确定性。把两者的适用场景、双哈希写法、next 数组的含义一次讲清。</description>
+    </item>
+    <item>
+      <title>CF 1833F Ira and Flamenco · 补题</title>
+      <link>https://chuan-411.github.io/solutions/cf1833f</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/solutions/cf1833f</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <category>补题</category>
+      <description>从 n 个数里选 m 个互不相同的数，要求极差严格小于 m，求方案数。排序去重后滑窗 + 乘法原理。</description>
+    </item>
+    <item>
+      <title>ABC 308 G Minimum Xor Pair Query · 补题</title>
+      <link>https://chuan-411.github.io/solutions/abc308g</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/solutions/abc308g</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <category>补题</category>
+      <description>动态集合的插入、删除、查询最小异或点对。用有序集合维护「相邻异或」即可。</description>
+    </item>
+    <item>
+      <title>二分答案：把「求最优」改写成「判可行」 · 笔记</title>
+      <link>https://chuan-411.github.io/notes/binary-search-answer</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/notes/binary-search-answer</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <category>笔记</category>
+      <description>单调性是二分答案的许可证。这篇笔记讨论如何快速判断一道题能不能二分，以及 check 函数该写多严格。</description>
+    </item>
+    <item>
+      <title>P3373 【模板】线段树 2 · 补题</title>
+      <link>https://chuan-411.github.io/solutions/luogu-p3373</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/solutions/luogu-p3373</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <category>补题</category>
+      <description>区间加、区间乘、区间求和。标记下发的顺序与「乘法缩放加法标记」是这道模板的全部难点。</description>
+    </item>
+    <item>
+      <title>线段树与懒标记：把「区间修改」推迟到不得不做的时候 · 笔记</title>
+      <link>https://chuan-411.github.io/notes/segment-tree-lazy</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/notes/segment-tree-lazy</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <category>笔记</category>
+      <description>从 pushup / pushdown 的分工讲起，手写一份支持区间加、区间求和、区间赋值的线段树，并解释标记为什么可以乘起来。</description>
+    </item>
+    <item>
+      <title>CF 1778E The Tree Has Fallen! · 补题</title>
+      <link>https://chuan-411.github.io/solutions/cf-1778e</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/solutions/cf-1778e</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <category>补题</category>
+      <description>换根之后求子树内点权的最大异或和。线性基 + 欧拉序前缀后缀合并。</description>
+    </item>
+    <item>
+      <title>最短路三兄弟：Dijkstra、SPFA 与 Floyd · 笔记</title>
+      <link>https://chuan-411.github.io/notes/shortest-path</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/notes/shortest-path</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+      <category>笔记</category>
+      <description>三种最短路算法的适用边界、复杂度与手写模板，以及「负权边」这个分水岭到底卡在哪里。</description>
+    </item>
+    <item>
+      <title>CF 1843F2 Omsk Metro · 补题</title>
+      <link>https://chuan-411.github.io/solutions/cf-1843f2</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/solutions/cf-1843f2</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <category>补题</category>
+      <description>一棵只会往上长点的树，每次询问一条路径上是否存在和恰为 k 的连续子段。倍增维护「路径段的最大/最小子段和」。</description>
+    </item>
+    <item>
+      <title>背包 DP 全家桶：01 / 完全 / 多重 / 分组 · 笔记</title>
+      <link>https://chuan-411.github.io/notes/dp-backpack</link>
+      <guid isPermaLink="true">https://chuan-411.github.io/notes/dp-backpack</guid>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 GMT</pubDate>
+      <category>笔记</category>
+      <description>从「选或不选」这一句话出发，把四种背包的转移写在同一张表里，顺便记住那些容易写反的循环顺序。</description>
+    </item>
+  </channel>
+</rss>

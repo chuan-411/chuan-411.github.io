@@ -1,0 +1,21 @@
+import{i as f,r as L,b as _,a as h,d as x,c as g,m as C}from"./store.CPZ11kh9.js";import{t as y}from"./ui.CwxHsLpu.js";const w={1:"入门 800–1000",2:"提高 1000–1200",3:"熟练 1200–1400",4:"进阶 1400–1700",5:"高手 1700–2000",6:"省选 2000–2400"};function $(){return new Date().toISOString().slice(0,10)}function M(){let r=null,c="*";const s=e=>document.querySelector(e);async function m(){return r||(r=await fetch("/bank.json").then(e=>e.json()),r)}function u(e){const t=h(),o=g();if(s("[data-train-level]").textContent=t?`${t.rating} 分`:"未测评",s("[data-train-mastered]").textContent=String(C()),s("[data-train-pool]").textContent=`${e.problems.length} 题`,o){const a=$(),i=o.daily.filter(l=>!l.date||l.date===a),n=i.filter(l=>f(l.id)).length;s("[data-train-today]").textContent=i.length?`${n} / ${i.length}`:"0 / 0"}else s("[data-train-today]").textContent="0 / 0"}function p(){const e=s("ul[data-today-list]"),t=s("[data-today-empty]");if(!e)return;const o=g(),a=$(),i=(o?.daily??[]).filter(n=>!n.date||n.date===a);if(e.innerHTML="",!i.length){t.hidden=!1;return}t.hidden=!0;for(const n of i){const l=document.createElement("li");l.className="today-item";const d=f(n.id);l.innerHTML=`
+        <label class="today-check ${d?"is-done":""}">
+          <input type="checkbox" ${d?"checked":""} data-task="${n.id}" />
+          <span></span>
+        </label>
+        <div class="today-item__body">
+          <a href="${n.url??"#"}" target="_blank" rel="noopener">${n.title}</a>
+          <em>${n.meta??""}</em>
+        </div>
+        <span class="today-item__kind mono-sm">${k(n.kind)}</span>
+      `,e.appendChild(l)}}function k(e){return e==="problem"?"做题":e==="topic"?"专题":e==="contest"?"比赛":"复盘"}document.addEventListener("change",e=>{const t=e.target.closest("input[data-task]");if(!t)return;const o=t.dataset.task??"",a=t.checked;a!==f(o)&&L(o),t.closest(".today-check")?.classList.toggle("is-done",a),a&&(_(6,"完成任务",!0),y({icon:"✅",title:"任务完成",desc:"继续保持这个节奏，喵。",tone:"xp",ms:2200})),m().then(u)});function b(){const e=s("[data-bank-list]"),t=s("[data-bank-empty]"),o=s("[data-bank-count]");if(!e||!r)return;let a=r.problems;c!=="*"&&(a=a.filter(n=>n.level===c));const i=(s("[data-bank-search]")?.value??"").trim().toLowerCase();i&&(a=a.filter(n=>n.title.toLowerCase().includes(i)||n.tags.join(" ").toLowerCase().includes(i)||n.id.includes(i))),a=a.slice(0,40),o&&(o.textContent=`${a.length} 题 · 难度 ${c==="*"?"全部":w[c]}`),e.innerHTML=a.map(n=>`
+      <a class="bank-row" href="${n.url}" target="_blank" rel="noopener">
+        <span class="bank-row__id mono-sm">${n.id.replace("cf-","CF ")}</span>
+        <span class="bank-row__title">${n.title}</span>
+        <span class="bank-row__tags">${n.tags.slice(0,2).map(l=>`<i>${l}</i>`).join("")}</span>
+        <span class="bank-row__rating">${n.rating}</span>
+      </a>`).join(""),t&&(t.hidden=a.length>0)}document.querySelector("[data-level-filter]")?.addEventListener("click",e=>{const t=e.target.closest("[data-level]");t&&(document.querySelectorAll("[data-level-filter] .chip").forEach(o=>o.classList.remove("is-active")),t.classList.add("is-active"),c=t.dataset.level==="*"?"*":Number(t.dataset.level),b())}),document.querySelector("[data-random-problem]")?.addEventListener("click",()=>{if(!r)return;const e=c==="*"?r.problems:r.problems.filter(o=>o.level===c),t=e[Math.floor(Math.random()*e.length)];t&&(y({icon:"🎲",title:"抽到一题",desc:`${t.title} · CF ${t.rating}`,tone:"xp",ms:3e3}),window.open(t.url,"_blank","noopener"))}),document.querySelector("[data-today-refresh]")?.addEventListener("click",()=>{p(),m().then(u)});function v(e){const t=s("[data-next-contest]");if(!t)return;const o=Date.now(),a=e.upcoming.find(d=>d.start*1e3>o);if(!a){t.innerHTML='<span class="mono-sm">暂无排期</span>';return}const i=a.start*1e3-o,n=Math.floor(i/864e5),l=Math.floor(i%864e5/36e5);t.innerHTML=`
+      <b>${a.name}</b>
+      <span class="mono-sm">${n>0?`${n} 天 ${l} 小时后`:`${l} 小时内`} · ${a.platform}</span>
+      <a class="mono-sm" href="${a.url}" target="_blank" rel="noopener">比赛页 ↗</a>
+    `}(async()=>{const e=await m();u(e),p(),b(),v(e);const t=h(),o=s("[data-quiz-note]");o&&t&&(o.textContent=`上次测评：${t.rating} 分 · 做对 ${t.solved}/${t.total}`),x().plan||(s("[data-train-today]").textContent="未制定")})()}M();
